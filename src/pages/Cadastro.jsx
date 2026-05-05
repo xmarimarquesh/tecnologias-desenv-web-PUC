@@ -2,6 +2,7 @@ import { useState } from "react";
 import { auth, db } from "../services/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
+import { Link } from "react-router-dom";
 
 export default function Cadastro() {
   const [form, setForm] = useState({
@@ -50,6 +51,8 @@ export default function Cadastro() {
       <input name="nascimento" type="date" onChange={handleChange} />
 
       <button onClick={handleCadastro}>Cadastrar</button>
+      <Link to="/">
+        Já possui conta? Logar</Link>
     </div>
   );
 }
