@@ -41,7 +41,7 @@ export default function Cadastro() {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Cadastro</h2>
 
       <input name="email" placeholder="Email" onChange={handleChange} />

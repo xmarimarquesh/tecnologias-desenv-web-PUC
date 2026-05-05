@@ -27,11 +27,11 @@ export default function Principal() {
       <h2>Principal</h2>
 
       {userData && (
-        <>
+        <div className="container">
           <p>Nome: {userData.nome}</p>
           <p>Sobrenome: {userData.sobrenome}</p>
           <p>Nascimento: {userData.nascimento}</p>
-        </>
+        </div>
       )}
     </div>
   );
