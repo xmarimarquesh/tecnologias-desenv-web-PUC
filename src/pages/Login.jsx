@@ -2,6 +2,7 @@ import { useState } from "react";
 import { auth } from "../services/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -25,6 +26,8 @@ export default function Login() {
       <input type="password" placeholder="Senha" onChange={(e) => setSenha(e.target.value)} />
 
       <button onClick={handleLogin}>Entrar</button>
+      <Link to="/cadastro">
+        Não tem conta? Cadastre-se</Link>
     </div>
   );
 }
